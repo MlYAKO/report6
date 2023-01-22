@@ -117,4 +117,86 @@ class Player extends Character{
             }
         }        
     }
+    class Enemy extends Character {
+        private int handnumber;
+    
+        int gethandnumber(){
+            return this.handnumber;
+        }
+    
+        void sethandnumber(int handnumber){
+            this.handnumber = handnumber;
+        }
+        Enemy(String name, int win, int lose) {
+            super(name, win, lose);
+        }
+     
+        @Override
+        void act(ArrayList<Character> targets) {
+            Random random = new Random();
+            int command = random.nextInt(3);
+            getHands().get(command);
+            handnumber = getHands().get(command).eigenvalue();
+            System.out.println(getHands().get(command).name());
+        }
+     }
+     class Rock implements Hand{
+        private String name;
+        private int eigenvalue;//この手の数値
+    
+        Rock(String name, int eigenvalue){
+            this.name = name;
+            this.eigenvalue = eigenvalue;
+        }
+    
+        @Override
+        public String name(){
+            return name;
+        }
+    
+        @Override
+        public int eigenvalue(){
+            return this.eigenvalue;
+        }
+     }
+    
+     class scissors implements Hand{
+        private String name;
+        private int eigenvalue;
+    
+        scissors(String name, int eigenvalue){
+            this.name = name;
+            this.eigenvalue = eigenvalue;
+        }
+    
+        @Override
+        public String name(){
+            return name;
+        }
+    
+        @Override
+        public int eigenvalue(){
+            return this.eigenvalue;
+        }
+     }
+    
+     class paper implements Hand{
+        private String name;
+        private int eigenvalue;
+    
+        paper(String name, int eigenvalue){
+            this.name = name;
+            this.eigenvalue = eigenvalue;
+        }
+    
+        @Override
+        public String name(){
+            return name;
+        }
+    
+        @Override
+        public int eigenvalue(){
+            return this.eigenvalue;
+        }
+     }
 }
