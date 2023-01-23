@@ -13,7 +13,6 @@ public class Main{
                 board.Honda.openStatus();
                 System.out.println("あいこで...");
             }
-            //今回は５回戦のためあいこにはならない
             if (board.Rohan.gethandeigenvalue() - board.Honda.gethandeigenvalue() == -1 || board.Rohan.gethandeigenvalue() - board.Honda.gethandeigenvalue() == 2){
                 System.out.println(i + "戦目\nyon win!");
                 board.Rohan.setWin(board.Rohan.getWin() + 1);
@@ -35,6 +34,7 @@ public class Main{
         if (board.Rohan.getWin() > board.Honda.getWin()){
             System.out.println("お主、なかなかやりおる。また挑みに来るが良い！");
         }
+        //今回は５回戦のため引き分けにはならない。i=奇数にすれば引き分けになる
         if (board.Rohan.getWin() == board.Honda.getWin()){
             System.out.println("泥試合で草");
         }
