@@ -21,10 +21,10 @@ package jp.ac.uryukyu.ie.e225706;
         order.add(Honda);
     }
 
-    public void openStatus(Player player,Enemy enemy){
-        System.out.printf("%s:win %d  lose %d  number %d\n", player.getName(), player.getWin(), player.getLose(),player.gethandeigenvalue());
-        System.out.printf("%s:win %d  lose %d  number %d\n", enemy.getName(), enemy.getWin(), enemy.getLose(),enemy.gethandeigenvalue());
-    }
+    // public void openStatus(Player player,Enemy enemy){
+    //     System.out.printf("%s:win %d  lose %d  number %d\n", player.getName(), player.getWin(), player.getLose(),player.gethandeigenvalue());
+    //     System.out.printf("%s:win %d  lose %d  number %d\n", enemy.getName(), enemy.getWin(), enemy.getLose(),enemy.gethandeigenvalue());
+    // }
 
     public void janken(){
         for(var check : order){
