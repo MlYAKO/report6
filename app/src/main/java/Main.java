@@ -13,6 +13,7 @@ public class Main{
                 board.Honda.openStatus();
                 System.out.println("あいこで...");
             }
+            //今回は５回戦のためあいこにはならない
             if (board.Rohan.gethandeigenvalue() - board.Honda.gethandeigenvalue() == -1 || board.Rohan.gethandeigenvalue() - board.Honda.gethandeigenvalue() == 2){
                 System.out.println(i + "戦目\nyon win!");
                 board.Rohan.setWin(board.Rohan.getWin() + 1);
