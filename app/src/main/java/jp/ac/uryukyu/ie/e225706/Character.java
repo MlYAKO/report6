@@ -6,13 +6,15 @@ public abstract class Character{
     private String name;
     private int win;
     private int lose;
+    private int handeigenvalue;
 
     private ArrayList<Hand> hands = new ArrayList<>();
 
-    public Character(String name, int win, int lose){
+    public Character(String name, int win, int lose, int handeigenvalue){
         this.name = name;
         this.win = win;
         this.lose = lose;
+        this.handeigenvalue = handeigenvalue;
     }
     
     public void addAction(Hand hand) {
@@ -23,7 +25,7 @@ public abstract class Character{
         System.out.printf("%s:win %d  lose %d\n", name, win, lose);
     }
 
-    abstract void act(ArrayList<Character> targets);
+    public abstract void act(ArrayList<Character> targets);
 
     public String getName(){
         return this.name;
@@ -35,6 +37,10 @@ public abstract class Character{
         return this.lose;
     }
 
+    public int gethandeigenvalue(){
+        return this.handeigenvalue;
+    }
+
     public ArrayList<Hand> getHands(){
         return hands;
     }
@@ -44,5 +50,8 @@ public abstract class Character{
     }
     public void setLose(int lose){
         this.lose = lose;
+    }
+    public void sethandeigenvalue(int eigenvalue){
+        this.handeigenvalue = eigenvalue;
     }
 }

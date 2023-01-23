@@ -4,7 +4,7 @@ public class scissors implements Hand{
     private String name;
     private int eigenvalue;
 
-    public scissors(String name, int eigenvalue){
+    scissors(String name, int eigenvalue){
         this.name = name;
         this.eigenvalue = eigenvalue;
     }
@@ -18,4 +18,8 @@ public class scissors implements Hand{
     public int eigenvalue(){
         return this.eigenvalue;
     }
- }
+    @Override
+    public void execute(Character executer, Character target) {
+        executer.sethandeigenvalue(2);
+    }
+}

@@ -6,10 +6,11 @@ package jp.ac.uryukyu.ie.e225706;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
-class JankenTest {
+class AppTest {
     @Test void appHasAGreeting() {
-        var board = new Gameboard();
-        board.openStatus();
+        Gameboard board = new Gameboard();
         board.janken();
+        board.Rohan.openStatus();
+        assertNotNull(board.getGreeting(), "app should have a greeting");
     }
 }

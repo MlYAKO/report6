@@ -18,4 +18,10 @@ public class paper implements Hand{
     public int eigenvalue(){
         return this.eigenvalue;
     }
+    
+
+    @Override
+    public void execute(Character executer, Character target) {
+        executer.sethandeigenvalue(3);
+    }
  }
