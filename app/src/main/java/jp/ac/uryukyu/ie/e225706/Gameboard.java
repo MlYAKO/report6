@@ -32,8 +32,4 @@ package jp.ac.uryukyu.ie.e225706;
         }
     }
 
-    public Object getGreeting() {
-        return null;
-    }
-
 }
